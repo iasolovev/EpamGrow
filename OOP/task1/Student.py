@@ -9,7 +9,7 @@ class Student:
         self.courses.extend(args)
 
     def enter_job(self, *args):
-        if set(self.courses).issubset(set(args)) or set(args).issubset(set(self.courses)):
+        if set(args).issubset(set(self.courses)):
             print('Студент', self.name, 'принят на работу')
         else:
             print('Увы, вы нам не подходите')
