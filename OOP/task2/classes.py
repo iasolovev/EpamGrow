@@ -2,7 +2,7 @@ class Goods:
     total_count = 0
     total_sum = 0
 
-    def __init__(self, name, price):
+    def __init__(self, name: str, price: float):
         self.name = name
         self.price = price
         Goods.total_count += 1
@@ -23,7 +23,7 @@ class Goods:
 
 
 class TV(Goods):
-    def __init__(self, name, price, diagonal):
+    def __init__(self, name: str, price: float, diagonal: float):
         super().__init__(name, price)
         self.diagonal = diagonal
 
@@ -36,7 +36,7 @@ class TV(Goods):
 
 
 class Phone(Goods):
-    def __init__(self, name, price, os):
+    def __init__(self, name: str, price: float, os: str):
         super().__init__(name, price)
         self.os = os
 
@@ -45,4 +45,3 @@ class Phone(Goods):
 
     def __eq__(self, other):
         return super().__eq__(other) and self.name == other.name and self.os == other.os
-
