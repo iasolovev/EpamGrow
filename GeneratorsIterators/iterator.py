@@ -1,7 +1,7 @@
 import os
 
 
-class JokeIterator:
+class FileIterator:
     def __init__(self, directory):
         self.directory = directory
         self.file_names = os.listdir(directory)
@@ -20,6 +20,6 @@ class JokeIterator:
 
 
 if __name__ == '__main__':
-    joke_iterator = JokeIterator('C:/')
-    for file_name in joke_iterator:
+    file_iterator = FileIterator('C:/')
+    for file_name in file_iterator:
         print(file_name)
